@@ -2,17 +2,19 @@ package com.hystrix;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class TimeoutTesting {
 
 	 public static void main( String[] args ) throws Exception
 	    {
 		   
-		   ThreadPoolExecutor tpe=new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
-	                new ArrayBlockingQueue<Runnable>(5));
+		   ExecutorService tpe=Executors.newFixedThreadPool(10);
 		   FutureTask<String> ft=new FutureTask<String>(new  Callable<String>()
 				   {
 				@Override
@@ -33,11 +35,15 @@ public class TimeoutTesting {
 		   {	   
 			   ft.cancel(true);
 			   System.out.println("thread stop");
+			   throw new TimeoutException();
 		   }
 		   
-		   System.out.println(ft.get());
+		   //System.out.println(ft.get());
 		  
-          tpe.shutdown();
+          tpe.shutdownNow();
+          
+          
+          
 	    
 	    }
 	

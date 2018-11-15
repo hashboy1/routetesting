@@ -6,7 +6,18 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 public class Main {
-
+	
+	
+	
+	static{
+		
+		System.out.println("static program");
+		
+	}
+	 public static void pringtLabel()
+	 {
+		 System.out.println("pringtLabel");
+	 }
 	public static void main(String[] args) {
 		
 		Integer i=127;

@@ -1,9 +1,12 @@
 package com.route;
 
+import com.route.Main;
+
 public class TestString {
 
 	public static void main(String[] args) {
-
+     Main.pringtLabel();
+		
      String a = "login:123";
      System.out.println(a.substring(0,6));
      System.out.println(a.substring(6));
@@ -19,6 +22,8 @@ public class TestString {
      {
     	 System.out.println("Sub String:"+ e);
      }
+     
+     Main.pringtLabel();
      
 	}
 

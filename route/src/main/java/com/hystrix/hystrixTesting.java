@@ -23,13 +23,15 @@ public class hystrixTesting {
 				   });
 		   ft.run();
            System.out.println(ft.isDone());
+           
+           
           try{
            ft.get();
             }
             catch(Exception ex)
             {   
             	System.out.println("service level down");
-            	ex.printStackTrace();
+            	//ex.printStackTrace();
             	
             }
 	    

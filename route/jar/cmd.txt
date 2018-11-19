@@ -1,0 +1,14 @@
+1.制作一个jar文件
+
+
+--2.可以用java运行jar包确认成功
+java -classpath socketclient.jar com.socketClient.SocketClient
+
+--docker build命令  制作一个dockerfile将jar文件打包成docker imager，命令会检查运行目录下的Dockerfile文件，Dockerfile文件里具体的构建命令
+docker build -t socketclient .
+
+
+
+--调用javaagent 添加记日志功能：
+java -javaagent:route-0.0.1-SNAPSHOT.jar  -classpath socketclient.jar com.socketClient.SocketClient
+

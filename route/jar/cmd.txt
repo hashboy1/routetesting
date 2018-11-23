@@ -11,4 +11,5 @@ docker build -t socketclient .
 
 --调用javaagent 添加记日志功能：
 java -javaagent:route-0.0.1-SNAPSHOT.jar  -classpath socketclient.jar com.socketClient.SocketClient
+java -javaagent:d:\pinpoint-agent\pinpoint-bootstrap-1.5.2.jar -Dpinpoint.agentId=pp20181120 -Dpinpoint.applicationName=socketclient -classpath socketclient.jar com.socketClient.SocketClient
 

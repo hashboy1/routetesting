@@ -102,22 +102,42 @@
 		</dependency>
 		
 		
-				<!-- jdbc driver -->
+		<!-- jdbc driver -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.driver.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
-		
-				
+			
 	   <dependency>
 		    <groupId>org.javassist</groupId>
 		    <artifactId>javassist</artifactId>
 		    <version>3.21.0-GA</version>
 		</dependency>
 		
+		   <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        
+        
+		 <!-- JDK 1.8+ compatible -->
+			<dependency>
+			   <groupId>org.redisson</groupId>
+			   <artifactId>redisson</artifactId>
+			   <version>3.5.4</version>
+			</dependency> 
+			
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<dependency>
+			    <groupId>com.google.guava</groupId>
+			    <artifactId>guava</artifactId>
+			    <version>27.0.1-jre</version>
+			</dependency>
+			
+
 		
     
   </dependencies>

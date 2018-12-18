@@ -35,11 +35,11 @@ public class MysqlHandler implements Runnable {
 				Connection con = null;
 		        String driver = "com.mysql.jdbc.Driver";
 		          //URL指向要访问的数据库名mydata
-		        String url = "jdbc:mysql://192.168.0.249:3306/testdb";
+		        String url = "jdbc:mysql://192.168.0.160:3306/test2?useUnicode=true&characterEncoding=utf-8&&useSSL=true";
 		        //MySQL配置时的用户名
-		        String user = "vrkb";
+		        String user = "root";
 		         //MySQL配置时的密码
-		        String password = "3dms";
+		        String password = "root";
 		          //遍历查询结果集
 		         try {
 		             //加载驱动程序
@@ -48,7 +48,7 @@ public class MysqlHandler implements Runnable {
 		             con = DriverManager.getConnection(url,user,password);
 		             Statement statement = con.createStatement();
 		             
-		             for (int j=1;j<=1000000;j++)
+		             for (int j=1;j<=10000;j++)
 		             {
 		             String sql="insert into tperformance(uuid) values('"+ UUID.randomUUID().toString()+"')";
 		             statement.execute(sql);

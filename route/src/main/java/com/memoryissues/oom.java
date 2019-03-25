@@ -1,4 +1,4 @@
-package com.oom;
+package com.memoryissues;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.channels.FileChannel;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class oom2 {
+public class oom {
 	
 	
 	/*
@@ -18,18 +18,19 @@ public class oom2 {
 
 	 */
 	
-	static HashMap<Object, Object> hs;
-	
 	public static void main(String[] args) throws Exception {
 		
-		hs=new HashMap();
+		HashMap<Object, Object> hs=new HashMap();
 		int i =0;
 		
 		while (true)
 		{
-			 String aa="aa";
-			 hs.put(i, aa);
-			 //System.out.println(hs.size());
+			 FileChannel fin =  new FileInputStream("f:\\1.obj").getChannel();
+			 ByteBuffer buff = ByteBuffer.allocate((int) fin.size());
+			 fin.read(buff);
+			 fin.close();	 
+			 hs.put(i, buff);
+			 System.out.println(hs.size());
 			 i++;
 			
 		}

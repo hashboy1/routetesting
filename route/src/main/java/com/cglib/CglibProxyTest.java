@@ -18,7 +18,7 @@ import net.sf.cglib.proxy.MethodProxy;
  */
 
 public class CglibProxyTest {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         CglibTestSon CglibTestSon = new CglibTestSon();
         Enhancer enhancer = new Enhancer();
         Callback s = new MthdInvoker(CglibTestSon);

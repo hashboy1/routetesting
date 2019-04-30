@@ -1,5 +1,6 @@
 package com.concurrent;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -11,7 +12,9 @@ public class SemaphoreDemo {
 		
 		SemaphoreDemo sd=new SemaphoreDemo();
 		sd.execute();
-	
+	   
+		//ConcurrentHashMap<String, String> chm=new ConcurrentHashMap<>();
+		
 	
 	}
 	

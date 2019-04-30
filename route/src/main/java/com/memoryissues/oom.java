@@ -23,6 +23,12 @@ public class oom {
 		HashMap<Object, Object> hs=new HashMap();
 		int i =0;
 		
+		java.lang.OutOfMemoryError oe = new java.lang.OutOfMemoryError();
+		java.lang.StackOverflowError oe1=new java.lang.StackOverflowError();
+		
+		
+		try{
+		
 		while (true)
 		{
 			 FileChannel fin =  new FileInputStream("f:\\1.obj").getChannel();
@@ -33,6 +39,11 @@ public class oom {
 			 System.out.println(hs.size());
 			 i++;
 			
+		}
+		}
+		catch (Exception ex)
+		{
+			System.out.println("Memory Exception:"+ex.toString());
 		}
 
 	}

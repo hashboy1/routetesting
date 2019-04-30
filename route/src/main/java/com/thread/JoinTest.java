@@ -31,6 +31,9 @@ public class JoinTest implements Runnable {
         t3.start();
         t1.join();    //the thread will waiting until the it finished.
         t2.start();
+        
+   // sun.misc.Unsafe a = new  sun.misc.Unsafe();
+    
     }
 
 }

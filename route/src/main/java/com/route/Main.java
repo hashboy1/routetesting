@@ -26,6 +26,19 @@ public class Main {
 		System.out.println(i!=127);
 		System.out.println(a!=256);
 		
+		
+		try
+		{
+			String aa=null;
+			aa.length();
+			
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Error:"+ex.toString());
+			ex.printStackTrace();
+		}
+		
 	/*
 		Scanner sc = new Scanner(System.in); 	
 		String ss= sc.nextLine(); 

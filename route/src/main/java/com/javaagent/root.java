@@ -8,5 +8,6 @@ public class root {
         System.out.println(agentOps);
         // 添加Transformer
         inst.addTransformer(new FirstAgent());
+        //inst.addTransformer(new SecondAgent());
     }
 }

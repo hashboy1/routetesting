@@ -2,6 +2,7 @@ package com.dataStructure;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -25,6 +26,9 @@ public class hashTesting {
 		
 		HashSet hs=new HashSet();
 		ConcurrentHashMap hm=new ConcurrentHashMap(); 
+		
+		Map table=new Hashtable();
+		
 
 	}
 

@@ -29,7 +29,7 @@ public class oom2 {
 		{
 			 String aa="aa";
 			 hs.put(i, aa);
-			 //System.out.println(hs.size());
+			 System.out.println(hs.size());
 			 i++;
 			
 		}

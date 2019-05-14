@@ -49,4 +49,5 @@ this.name = name;
 public String toString() { // 这里偷懒用了Fastjson
 return JSON.toJSONString(this);
 }
+
 }
